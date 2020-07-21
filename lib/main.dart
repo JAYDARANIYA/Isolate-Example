@@ -27,7 +27,7 @@ Future<List<Photo>> fetchPhotos(http.Client client) async {
   return compute(parsePhotos, client);
 }
 
-// A function that call the api and converts a response body into a List<Photo>.
+// A function that call the api and converts a response body into a List<Photo>. Model List
 Future<List<Photo>> parsePhotos(http.Client client) async {
   final response =
       await client.get('https://jsonplaceholder.typicode.com/photos');
